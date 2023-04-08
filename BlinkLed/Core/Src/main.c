@@ -53,7 +53,7 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+int status;
 /* USER CODE END 0 */
 
 /**
@@ -100,6 +100,7 @@ int main(void)
     HAL_Delay(1000);
 */
 	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	status = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_13);
 	HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
